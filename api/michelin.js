@@ -1,15 +1,16 @@
 const rp = require('request-promise');
 const cheerio = require('cheerio');
-const url = 'https://restaurant.michelin.fr/restaurants/france/restaurants-1-etoile-michelin/restaurants-2-etoiles-michelin/restaurants-3-etoiles-michelin';
+const url1 = 'https://restaurant.michelin.fr/restaurants/france/restaurants-1-etoile-michelin';
 
-const name = [];
+var addRestaurant = require('./addRestaurant');
 
-rp((url), function(err, resp, html) {
+rp((url1), function(err, resp, html) {
   if (!err){
     const $ = cheerio.load(html);
     $('div[class=poi_card-display-title]').each(function(i, elm) {
-      name.push($(this).text())
+      let name = $(this).text();
+      name = name.substring(11, name.length - 8);
+      addRestaurant(name, 1);
     });
-    console.log(name);
   }
 });
