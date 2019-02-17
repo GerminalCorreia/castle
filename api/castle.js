@@ -1,3 +1,4 @@
+// Castle schema in mongoDB
 var mongoose = require('mongoose');
 
 var castleSchema = new mongoose.Schema({

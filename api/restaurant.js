@@ -1,3 +1,4 @@
+// Restaurant schema in mongoDB
 var mongoose = require('mongoose');
 
 var restaurantSchema = new mongoose.Schema({
