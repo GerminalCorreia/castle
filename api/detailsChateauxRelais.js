@@ -5,28 +5,19 @@ const addCastle = require('./addCastle');
 module.exports = function(url) {
   rp(url, function(err, resp, html) {
     if (!err){
-      const $html = cheerio.load(html);
-      $html('div[id=countryF]').each(function(i, elm) {
-
-
-
-
-
-
-        /*let country = $country(this).text().substring(29,35); // To only get the word "France" from the div
-        if (country === "France") { // Scrapping all castles from France
-          const $castle = cheerio.load($country(this).html());
-          $castle('li').each(function(i, elm) {
-            let link = ""
-            if (link === "") { // To only get the first link per castle (we do not want the links about the chef or the owner)
-              link = $castle(this).children().attr('href'); // Scrapping the link
-            }
-            console.log(link);
-            console.log("---------");
-          });
-        }
+      const $html = cheerio.load(html); // All the html of the page
+      var name;
+      var price;
+      $html('.hotelTabsHeaderTitle').each(function(i, elm) {  // To get the title of the restaurant
+        name = $html(this).text().substring(86,150);
       });
-      console.log("test");*/
+      $html('.priceTag').each(function(i, elm) { // To get the price of the castle
+        price = $html(this).children().children('.price').text();
+        price = price.substring(0, price.length - 3); // Taking off the number after "," in the price
+        price = Number(price); // Transforming the price from string to number
+      });
+      console.log(name);
+      console.log(price);
     }
   });
 
