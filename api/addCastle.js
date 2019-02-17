@@ -8,8 +8,6 @@ module.exports = function(name, price) {
 
     const castle = new Castle({ name : name, price : price, starred : false});
 
-    console.log(castle);
-
     castle.save(function (err) {
       if (err) { throw err; }
       mongoose.connection.close();

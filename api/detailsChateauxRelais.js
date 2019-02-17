@@ -10,16 +10,14 @@ module.exports = function(url) {
       var price;
       $html('.hotelTabsHeaderTitle').each(function(i, elm) {  // To get the title of the restaurant
         name = $html(this).text().substring(86,150);
+        name = name.substring(0,name.indexOf("\n")); // To clean the string (taking off the useless spaces and the "\n")
       });
       $html('.priceTag').each(function(i, elm) { // To get the price of the castle
         price = $html(this).children().children('.price').text();
         price = price.substring(0, price.length - 3); // Taking off the number after "," in the price
         price = Number(price); // Transforming the price from string to number
       });
-      console.log(name);
-      console.log(price);
       addCastle(name, price);
     }
   });
-
 }
