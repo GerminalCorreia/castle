@@ -1,5 +1,5 @@
 // Function to add a castle to the DB
-const Castle = require('./castle');
+const Castle = require('../schema/castle');
 
 module.exports = function(name, price) {
     const mongoose = require('mongoose');

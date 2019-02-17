@@ -1,5 +1,5 @@
 // Function to add a restaurant to the DB
-const Restaurant = require('./restaurant');
+const Restaurant = require('../schema/restaurant');
 
 module.exports = function(name) {
     const mongoose = require('mongoose');

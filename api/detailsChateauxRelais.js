@@ -1,6 +1,6 @@
 const rp = require('request-promise');
 const cheerio = require('cheerio');
-const addCastle = require('./addCastle');
+const addCastle = require('./addToMongoDB/addCastle');
 
 module.exports = function(url) {
   rp(url, function(err, resp, html) {
