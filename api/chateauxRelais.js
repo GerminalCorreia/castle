@@ -1,6 +1,6 @@
 const rp = require('request-promise');
 const cheerio = require('cheerio');
-const addCastle = require('./addCastle');
+const getRestaurant = require('./chateauxRelaisRestaurant');
 
 const url = 'https://www.relaischateaux.com/fr/site-map/etablissements?fbclid=IwAR2eurtYcGpXXcOeEO3YBva-z8tVNCNs_9eb7zZ-cFedPpwLV0XwFcPfjmY#countryF';
 
@@ -16,11 +16,9 @@ rp(url, function(err, resp, html) {
           if (link === "") { // To only get the first link per castle (we do not want the links about the chef or the owner)
             link = $castleFrance(this).children().attr('href'); // Scrapping the link
           }
-          console.log(link);
-          console.log("---------");
+          getRestaurant(link);
         });
       }
     });
-    console.log("test");
   }
 });

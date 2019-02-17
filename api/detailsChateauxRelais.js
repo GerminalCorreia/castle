@@ -17,7 +17,9 @@ module.exports = function(url) {
         price = price.substring(0, price.length - 3); // Taking off the number after "," in the price
         price = Number(price); // Transforming the price from string to number
       });
-      addCastle(name, price);
+      if (name != null) {
+        addCastle(name, price);
+      }
     }
   });
 }
