@@ -18,6 +18,7 @@ module.exports = function(url) {
       });
       console.log(name);
       console.log(price);
+      addCastle(name, price);
     }
   });
 
