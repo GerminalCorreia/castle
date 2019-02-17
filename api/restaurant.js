@@ -1,7 +1,7 @@
 // Restaurant schema in mongoDB
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var restaurantSchema = new mongoose.Schema({
+const restaurantSchema = new mongoose.Schema({
   name : String
 });
 

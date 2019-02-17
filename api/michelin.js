@@ -1,8 +1,8 @@
 const rp = require('request-promise');
 const cheerio = require('cheerio');
-const url = 'https://restaurant.michelin.fr/restaurants/france/restaurants-1-etoile-michelin/restaurants-2-etoiles-michelin/restaurants-3-etoiles-michelin/page-';
-
 const addRestaurant = require('./addRestaurant');
+
+const url = 'https://restaurant.michelin.fr/restaurants/france/restaurants-1-etoile-michelin/restaurants-2-etoiles-michelin/restaurants-3-etoiles-michelin/page-';
 
 // Scraping the starred restaurants on Michelin's website (35 pages)
 for (i = 1; i <= 35; i++) {

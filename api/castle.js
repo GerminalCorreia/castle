@@ -1,7 +1,7 @@
 // Castle schema in mongoDB
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var castleSchema = new mongoose.Schema({
+const castleSchema = new mongoose.Schema({
   name : String,
   price : Number,
   starred : Boolean
