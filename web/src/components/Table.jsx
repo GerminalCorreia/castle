@@ -7,7 +7,7 @@ export default function Table(props) {
       <thead>
         <tr>
           <th>
-            <button onClick={() => props.sortBy('name')}>Name</button>
+            Name
           </th>
           <th>
             <button className="button" onClick={() => props.sortBy('price')}>Price</button>
@@ -18,7 +18,7 @@ export default function Table(props) {
         {
           props.data.map(row => (
             <tr>
-              <td>{row.name}</td>
+              <td width="500">{row.name}</td>
               <td className="priceRow">{row.price}</td>
             </tr>
           ))
