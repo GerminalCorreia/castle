@@ -45,8 +45,9 @@ wait until the program finishes
 
 **Note**: this script has been written `package.json` to run both the server and the client.
 
-**Note**: this script should open automaticaly the website on the browser. If not, you can still manually access it by going on localhost:3000 on your browser.
+**Note**: this script should open automaticaly the website on the browser. If not, you can still manually access it by going on `localhost:3000` on your browser.
 
+You can sort the restaurants by their price by clicking on the `Price` button.
 
 # Castle
 
