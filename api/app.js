@@ -31,7 +31,7 @@ app.use((req, res, next) => {
 });
 
 app.get("/api/name", (req, res, next) => {
-  Castle.find({starred: true}).sort({name: 1}).then(documents => {
+  Castle.find({starred: true, price: {$gt: 0}}).sort({name: 1}).then(documents => {
     res.status(200).json({
       message: 'succes',
       castles: documents
