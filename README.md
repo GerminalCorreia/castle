@@ -1,4 +1,4 @@
-# Advanced Web Technologies Workshop
+# Web Application Architectures Workshop
 
 > Scrapping data from Relais&Chateaux and Michelin websites to provide a list of starred restaurants and the price of their respective hotel
 
