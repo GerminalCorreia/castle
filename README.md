@@ -9,6 +9,8 @@
 ❯ mongod
 ```
 
+**Note**: You have to let it open while you're using the website.
+
 ## Scrap the Data
 
 1. Scrap the starred restaurants from Michelin
@@ -19,7 +21,7 @@
 > node michelin.js
 ```
 
-wait until the scraping finishes
+wait until the scraping finishes.
 
 2. Scrap the hotels + restaurants from Relais&Chateaux
 
@@ -27,7 +29,7 @@ wait until the scraping finishes
 > node relaisChateaux.js
 ```
 
-wait until the scraping finishes
+wait until the scraping finishes.
 
 3. Check which hotels + restaurants are starred
 
@@ -35,19 +37,23 @@ wait until the scraping finishes
 > node starredRestaurants.js
 ```
 
-wait until the program finishes
+wait until the program finishes.
 
-## Run the server and the client
+## Run the Server and the Client
 
 ```sh
 > npm run dev
 ```
+
+Go check the website on your browser !
 
 **Note**: this script has been written `package.json` to run both the server and the client.
 
 **Note**: this script should open automaticaly the website on the browser. If not, you can still manually access it by going on `localhost:3000` on your browser.
 
 You can sort the restaurants by their price by clicking on the `Price` button.
+
+
 
 # Castle
 
