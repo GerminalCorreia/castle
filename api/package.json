@@ -5,12 +5,16 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix ../web",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Germinal Correia",
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "concurrently": "^4.1.0",
     "mongoose": "^5.4.13",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
