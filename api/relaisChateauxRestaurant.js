@@ -1,6 +1,6 @@
 const rp = require('request-promise');
 const cheerio = require('cheerio');
-const details = require('./detailsChateauxRelais');
+const details = require('./detailsRelaisChateaux');
 
 module.exports = function(url) {
   rp(url, function(err, resp, html) {

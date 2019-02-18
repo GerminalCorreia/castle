@@ -1,3 +1,53 @@
+# Advanced Web Technologies Workshop
+
+> Scrapping data from Relais&Chateaux and Michelin websites to provide a list of starred restaurants and the price of their respective hotel
+
+## Run the MongoDB Server
+
+```sh
+❯ cd /path/to/workspace
+❯ mongod
+```
+
+## Scrap the Data
+
+1. Scrap the starred restaurants from Michelin
+
+```sh
+❯ cd /path/to/workspace
+❯ cd api
+> node michelin.js
+```
+
+wait until the scraping finishes
+
+2. Scrap the hotels + restaurants from Relais&Chateaux
+
+```sh
+> node relaisChateaux.js
+```
+
+wait until the scraping finishes
+
+3. Check which hotels + restaurants are starred
+
+```sh
+> node starredRestaurants.js
+```
+
+wait until the program finishes
+
+## Run the server and the client
+
+```sh
+> npm run dev
+```
+
+**Note**: this script has been written `package.json` to run both the server and the client.
+
+**Note**: this script should open automaticaly the website on the browser. If not, you can still manually access it by going on localhost:3000 on your browser.
+
+
 # Castle
 
 > Sleep well with Relais & Châteaux
