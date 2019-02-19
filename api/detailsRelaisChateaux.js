@@ -19,6 +19,7 @@ module.exports = function(url) {
       });
       if (name != null) {
         addCastle(name, price);
+        console.log('"' + name + '" added to DB');
       }
     }
   });

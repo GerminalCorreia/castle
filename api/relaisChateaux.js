@@ -10,6 +10,7 @@ rp(url, function(err, resp, html) {
     $html('div[id=countryF]').each(function(i, elm) {
       let country = $html(this).text().substring(29,35); // To only get the word "France" from the div
       if (country === "France") { // Scrapping all castles from France
+        console.log("Scraping hotels + restaurants of France... wait for the process to finishes");
         const $castleFrance = cheerio.load($html(this).html()); // The html about the castles in France
         $castleFrance('li').each(function(i, elm) {
           let link = ""

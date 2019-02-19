@@ -1,3 +1,4 @@
+// The table with the list of castles and their price
 import React from 'react';
 
 export default function Table(props) {

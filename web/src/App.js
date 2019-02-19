@@ -9,14 +9,13 @@ class App extends Component {
     super(props)
     this.state = {
       data: [],
-      direction: {
-
-      }
+      direction: {}
     }
     this.getData();
     this.sortBy = this.sortBy.bind(this)
   }
 
+  // To get the data from the server
   getData() {
     axios.get('http://localhost:5000/api/name')
       .then(res => {
@@ -27,10 +26,7 @@ class App extends Component {
       });
   }
 
-  print() {
-    console.log(this.state.data);
-  }
-
+  // To sort the castles by their price
   sortBy(key) {
     this.setState({
       data: this.state.data.sort( (a, b) => (

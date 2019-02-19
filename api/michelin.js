@@ -13,6 +13,7 @@ for (i = 1; i <= 35; i++) {
         let name = $(this).text(); // Get restaurant's name
         name = name.substring(11, name.length - 8); // Cleaning the name (take of "\n      " at the begin and "    " at the end)
         addRestaurant(name); // Add the restaurant to the DB
+        console.log('"' + name + '" added to DB');
       });
     }
   });

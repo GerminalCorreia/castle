@@ -31,6 +31,8 @@ wait until the scraping finishes.
 
 wait until the scraping finishes.
 
+**Note**: This process takes quite a lot of time. Don't worry if some errors appear on console, it's normal and won't block the scraping.
+
 3. Check which hotels + restaurants are starred
 
 ```sh
